@@ -3,7 +3,7 @@ description: "RABMEN SECURITY HUB"
 url: "https://ariyts.github.io"
 baseurl: ""
 
-theme: "mmistakes/minimal-mistakes"
+theme: "mistakes/minimal-mistakes"
 minimal_mistakes_skin: "dark"
 
 # Автор
