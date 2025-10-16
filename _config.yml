@@ -64,3 +64,33 @@ defaults:
       author_profile: false
       toc: true
       toc_sticky: true
+
+
+# Боковая навигация для раздела "Заметки"
+defaults:
+  - scope:
+      path: ""
+      type: "notes"
+    values:
+      layout: single
+      author_profile: true # Показываем профиль автора в заметках
+      sidebar:
+        nav: "notes_sidebar"
+      toc: true
+      toc_sticky: true
+# (у вас уже есть блок defaults, добавьте это в него или объедините)
+
+# Описание самого меню
+notes_sidebar:
+  - title: "Nmap"
+    children:
+      - title: "Обнаружение хостов"
+        url: /notes/nmap-01-host-discovery/
+      - title: "Сканирование портов"
+        url: /notes/nmap-02-port-scanning-basics/
+      - title: "Работа с DNS"
+        url: /notes/nmap-03-dns-tricks/
+  - title: "Другие инструменты"
+    children:
+      - title: "Скоро..."
+        url: "#"

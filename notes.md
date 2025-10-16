@@ -1,9 +1,9 @@
 ---
-title: "Заметки"
+title: "База знаний"
 layout: collection
 collection: notes
 permalink: /notes/
+entries_layout: grid # или list
+sort_by: date
+sort_order: reverse
 ---
-
-# Заметки
-Здесь собраны все мои записи по безопасности и Nmap.

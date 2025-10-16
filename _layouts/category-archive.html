@@ -1,0 +1,16 @@
+---
+layout: archive
+---
+
+{{ content }}
+
+{% assign entries_layout = page.entries_layout | default: 'list' %}
+<div class="entries-{{ entries_layout }}">
+  {% for i in (1..page.limit) %}
+    {% unless forloop.last and page.show_more %}
+      {% include archive-single.html_auto_feed_item_category_hack %}
+    {% endunless %}
+  {% endfor %}
+</div>
+
+{% include paginator.html %}
