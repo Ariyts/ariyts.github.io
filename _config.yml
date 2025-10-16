@@ -1,18 +1,15 @@
 title: "RABMEN SECURITY HUB"
 description: "RABMEN SECURITY HUB"
-remote_theme: "mmistakes/minimal-mistakes"
-
-# Цветовая схема (варианты: default, dark, dirt, neon, air, sunrise, contrast, mint, plum)
-minimal_mistakes_skin: "dark"
-
-# Основные настройки сайта
 url: "https://ariyts.github.io"   # адрес сайта
 baseurl: ""                       # если сайт в корне (ariyts.github.io), оставь пустым
+
+remote_theme: "mmistakes/minimal-mistakes"
+minimal_mistakes_skin: "dark"     # варианты: default, dark, dirt, neon, air, sunrise, contrast, mint, plum
 
 # Автор
 author:
   name: "RABMEN"
-  avatar: "/assets/images/avatar.png"   # можно добавить картинку в assets/images
+  avatar: "/assets/images/avatar.png"   # добавь картинку в assets/images
   bio: "Security researcher & pentester notes"
   location: "Cyberspace"
   links:
@@ -31,16 +28,20 @@ nav:
     url: /notes/
   - title: "Обо мне"
     url: /about/
-  - title: "Заметки"
-    url: /notes/
 
-# Включаем плагины
+# Коллекции (для заметок)
+collections:
+  notes:
+    output: true
+    permalink: /:collection/:name
+
+# Плагины
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-sitemap
 
-# Настройки отображения
+# Настройки отображения по умолчанию
 defaults:
   - scope:
       path: ""
@@ -55,7 +56,11 @@ defaults:
       toc: true          # автоматическое оглавление
       toc_sticky: true   # закреплённое оглавление сбоку
 
-collections:
-  notes:
-    output: true
-    permalink: /:collection/:name
+  - scope:
+      path: ""
+      type: "notes"
+    values:
+      layout: single
+      author_profile: false
+      toc: true
+      toc_sticky: true
