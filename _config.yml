@@ -42,7 +42,9 @@ plugins:
   - jekyll-sitemap
 
 # Настройки отображения по умолчанию
+# Настройки отображения по умолчанию (ОБЪЕДИНЕННАЯ ВЕРСИЯ)
 defaults:
+  # Настройки для постов (если они у вас будут)
   - scope:
       path: ""
       type: "posts"
@@ -53,15 +55,18 @@ defaults:
       comments: false
       share: true
       related: true
-      toc: true          # автоматическое оглавление
-      toc_sticky: true   # закреплённое оглавление сбоку
+      toc: true
+      toc_sticky: true
 
+  # Настройки для наших заметок (notes)
   - scope:
       path: ""
       type: "notes"
     values:
       layout: single
-      author_profile: false
+      author_profile: true # Показываем профиль автора в заметках
+      sidebar:
+        nav: "notes_sidebar" # Включаем боковую навигацию
       toc: true
       toc_sticky: true
 
