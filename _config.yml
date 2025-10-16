@@ -81,3 +81,7 @@ notes_sidebar:
     children:
       - title: "Скоро..."
         url: "#"
+  - title: "Burp Suite"  # <-- НОВАЯ КАТЕГОРИЯ
+    children:
+      - title: "Введение и настройка" # <-- НОВАЯ ССЫЛКА
+        url: /notes/burp_Suite_pro/ # <-- ПУТЬ = /notes/ + ИМЯ_ФАЙЛА (без .md)
