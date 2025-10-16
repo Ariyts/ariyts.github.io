@@ -153,6 +153,11 @@
                         <i class="fas fa-robot w-5"></i>
                         <span class="ml-3">AI Tools</span>
                     </button>
+
+                    <button onclick="showContent('Prompt')" class="nav-btn w-full text-left px-4 py-3 rounded-lg hover:bg-cyan-500/10 hover:text-cyan-400 transition-all group">
+                        <i class="fas fa-robot w-5"></i>
+                        <span class="ml-3">Prompt</span>
+                    </button>
                     
                     <button onclick="showContent('resources')" class="nav-btn w-full text-left px-4 py-3 rounded-lg hover:bg-cyan-500/10 hover:text-cyan-400 transition-all group">
                         <i class="fas fa-book w-5"></i>
@@ -427,6 +432,149 @@
                     </div>
                 </div>
             </div>
+            <!-- Prompt Content -->
+            <div id="Prompt" class="content-section hidden">
+                <div class="p-8">
+                    <div class="max-w-6xl mx-auto">
+                        <h2 class="text-3xl font-bold text-purple-400 mb-6">
+                            <i class="fas fa-robot mr-3"></i>Prompt
+                        </h2>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <!-- Начало вашего блока -->
+<!-- Начало вашего блока -->
+<div class="bg-gray-800/50 backdrop-blur-sm border border-purple-500/30 rounded-lg p-6">
+    <h3 class="text-xl font-bold text-purple-400 mb-4">
+        <i class="fas fa-brain mr-2"></i>Общие
+    </h3>
+
+    <!-- Используем чуть большее расстояние между элементами для нового дизайна -->
+    <ul class="space-y-3 text-gray-300">
+        <!-- 1. Элемент с раскрывающимся превью -->
+        <li class="accordion-item">
+            <!-- Кликабельный заголовок для открытия/закрытия -->
+            <div class="accordion-toggle flex justify-between items-center cursor-pointer hover:text-white transition-colors duration-200">
+                <span>
+                    <i class="fas fa-chevron-right text-purple-400 mr-2 accordion-icon transition-transform duration-300"></i>Промт, чтоб лучше отвечал ГПТ
+                </span>
+            </div>
+            <!-- Скрытый контент, который будет появляться. Внутри него - наше превью. -->
+            <div class="accordion-content hidden mt-2 ml-6">
+                <div class="relative bg-gray-900/70 border border-gray-700 rounded-lg p-4">
+                    <!-- Контейнер с текстом, ограниченный по высоте для создания превью -->
+                    <div class="max-h-28 overflow-hidden">
+                        <!-- Этот <pre> содержит ПОЛНЫЙ текст, но визуально он будет обрезан -->
+<pre class="text-gray-300 whitespace-pre-wrap text-sm leading-relaxed" id="text-to-copy-1">
+###INSTRUCTIONS###
+You MUST follow the instructions for answering:
+- ALWAYS answer in the language of my message.
+- Read the entire convo history line by line before answering.
+- I have no fingers and the placeholders trauma. Return the entire code template for an answer when needed. NEVER use placeholders.
+- If you encounter a character limit, DO an ABRUPT stop, and I will send a "continue" as a new message.
+- You ALWAYS will be PENALIZED for wrong and low-effort answers. 
+- ALWAYS follow "Answering rules."
+
+###Answering Rules###
+Follow in the strict order:
+1. USE the language of my message.
+2. ONCE PER CHAT assign a real-world expert role to yourself before answering, 
+3. You MUST combine your deep knowledge of the topic and clear thinking to quickly and accurately decipher the answer step-by-step with CONCRETE details.
+4. I'm going to tip $1,000,000 for the best reply. 
+5. Your answer is critical for my career.
+6. Answer the question in a natural, human-like manner.
+7. ALWAYS use an answering example for a first message structure.
+ Deep knowledge step-by-step answer, with CONCRETE details 
+Отвечай коротко,  если тебя не попросят рассказать подробнее.
+Прежде чем дать ответ, оцени свою неопределённость.
+Если она выше 0.1 — задай мне уточняющий вопрос и подожди ответа.
+Повтори, пока показатель не станет 0.1 или ниже.
+</pre>
+                    </div>
+                    <!-- Эффект "исчезновения" текста внизу -->
+                    <div class="absolute bottom-4 left-4 right-4 h-16 bg-gradient-to-t from-gray-900/70 to-transparent pointer-events-none"></div>
+
+                    <!-- Кнопка Копировать, которая скопирует ВЕСЬ текст -->
+                    <button class="copy-button absolute top-3 right-3 bg-purple-600 hover:bg-purple-700 text-white text-xs font-bold py-1 px-3 rounded-md transition-all duration-200" data-target="text-to-copy-1">
+                        <i class="fas fa-copy mr-1"></i> Copy
+                    </button>
+                </div>
+            </div>
+        </li>
+
+        <!-- 2. Обычные элементы списка (остаются как были) -->
+        <li class="accordion-item">
+            <!-- Кликабельный заголовок для открытия/закрытия -->
+            <div class="accordion-toggle flex justify-between items-center cursor-pointer hover:text-white transition-colors duration-200">
+                <span>
+                    <i class="fas fa-chevron-right text-purple-400 mr-2 accordion-icon transition-transform duration-300"></i>2
+                </span>
+            </div>
+            <!-- Скрытый контент, который будет появляться. Внутри него - наше превью. -->
+            <div class="accordion-content hidden mt-2 ml-6">
+                <div class="relative bg-gray-900/70 border border-gray-700 rounded-lg p-4">
+                    <!-- Контейнер с текстом, ограниченный по высоте для создания превью -->
+                    <div class="max-h-28 overflow-hidden">
+                        <!-- Этот <pre> содержит ПОЛНЫЙ текст, но визуально он будет обрезан -->
+<pre class="text-gray-300 whitespace-pre-wrap text-sm leading-relaxed" id="text-to-copy-2">
+2
+</pre>
+                    </div>
+                    <!-- Эффект "исчезновения" текста внизу -->
+                    <div class="absolute bottom-4 left-4 right-4 h-16 bg-gradient-to-t from-gray-900/70 to-transparent pointer-events-none"></div>
+
+                    <!-- Кнопка Копировать, которая скопирует ВЕСЬ текст -->
+                    <button class="copy-button absolute top-3 right-3 bg-purple-600 hover:bg-purple-700 text-white text-xs font-bold py-1 px-3 rounded-md transition-all duration-200" data-target="text-to-copy-2">
+                        <i class="fas fa-copy mr-2"></i> Copy
+                    </button>
+                </div>
+            </div>
+        </li>
+
+        <li class="accordion-item">
+            <!-- Кликабельный заголовок для открытия/закрытия -->
+            <div class="accordion-toggle flex justify-between items-center cursor-pointer hover:text-white transition-colors duration-200">
+                <span>
+                    <i class="fas fa-chevron-right text-purple-400 mr-2 accordion-icon transition-transform duration-300"></i>3
+                </span>
+            </div>
+            <!-- Скрытый контент, который будет появляться. Внутри него - наше превью. -->
+            <div class="accordion-content hidden mt-2 ml-6">
+                <div class="relative bg-gray-900/70 border border-gray-700 rounded-lg p-4">
+                    <!-- Контейнер с текстом, ограниченный по высоте для создания превью -->
+                    <div class="max-h-28 overflow-hidden">
+                        <!-- Этот <pre> содержит ПОЛНЫЙ текст, но визуально он будет обрезан -->
+<pre class="text-gray-300 whitespace-pre-wrap text-sm leading-relaxed" id="text-to-copy-3">
+3
+</pre>
+                    </div>
+                    <!-- Эффект "исчезновения" текста внизу -->
+                    <div class="absolute bottom-4 left-4 right-4 h-16 bg-gradient-to-t from-gray-900/70 to-transparent pointer-events-none"></div>
+
+                    <!-- Кнопка Копировать, которая скопирует ВЕСЬ текст -->
+                    <button class="copy-button absolute top-3 right-3 bg-purple-600 hover:bg-purple-700 text-white text-xs font-bold py-1 px-3 rounded-md transition-all duration-200" data-target="text-to-copy-3"> 
+                        <i class="fas fa-copy mr-1"></i> Copy
+                    </button>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
+<!-- Конец вашего блока -->
+                            
+                            <div class="bg-gray-800/50 backdrop-blur-sm border border-cyan-500/30 rounded-lg p-6">
+                                <h3 class="text-xl font-bold text-cyan-400 mb-4">
+                                    <i class="fas fa-shield-alt mr-2"></i>AI-Powered Defense
+                                </h3>
+                                <ul class="space-y-2 text-gray-300">
+                                    <li><i class="fas fa-chevron-right text-cyan-400 mr-2"></i>Anomaly Detection Models</li>
+                                    <li><i class="fas fa-chevron-right text-cyan-400 mr-2"></i>Automated Threat Analysis</li>
+                                    <li><i class="fas fa-chevron-right text-cyan-400 mr-2"></i>ML-based WAF Configurations</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             
             <!-- Resources Content -->
             <div id="resources" class="content-section hidden">
@@ -609,5 +757,59 @@ mQINBGVkZXkBEADKj3rN....
             document.querySelector('.nav-btn').click();
         });
     </script>
+    <script>
+document.addEventListener('DOMContentLoaded', function() {
+
+    // --- Логика для раскрывающегося списка (аккордеона) ---
+    const accordionToggles = document.querySelectorAll('.accordion-toggle');
+
+    accordionToggles.forEach(toggle => {
+        toggle.addEventListener('click', () => {
+            const content = toggle.nextElementSibling;
+            const icon = toggle.querySelector('.accordion-icon');
+
+            // Переключаем видимость контента
+            content.classList.toggle('hidden');
+
+            // Поворачиваем иконку-стрелочку
+            if (content.classList.contains('hidden')) {
+                icon.classList.remove('rotate-90'); // Возвращаем в исходное положение
+            } else {
+                icon.classList.add('rotate-90'); // Поворачиваем на 90 градусов
+            }
+        });
+    });
+
+    // --- Логика для кнопки "Копировать" ---
+    const copyButtons = document.querySelectorAll('.copy-button');
+
+    copyButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const targetId = button.dataset.target;
+            const textToCopy = document.getElementById(targetId).innerText;
+
+            navigator.clipboard.writeText(textToCopy).then(() => {
+                // Успешно скопировано
+                const originalText = button.innerHTML;
+                button.innerHTML = '<i class="fas fa-check mr-1"></i> Сopied!';
+                button.classList.add('bg-green-500', 'hover:bg-green-600');
+                button.classList.remove('bg-purple-600', 'hover:bg-purple-700');
+                
+                // Возвращаем исходный текст и цвет через 2 секунды
+                setTimeout(() => {
+                    button.innerHTML = originalText;
+                    button.classList.remove('bg-green-500', 'hover:bg-green-600');
+                    button.classList.add('bg-purple-600', 'hover:bg-purple-700');
+                }, 2000);
+
+            }).catch(err => {
+                console.error('Ошибка при копировании текста: ', err);
+                alert('Не удалось скопировать текст.');
+            });
+        });
+    });
+
+});
+</script>
 </body>
 </html>
