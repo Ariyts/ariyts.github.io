@@ -1,3 +1,54 @@
 title: "RABMEN SECURITY HUB"
 description: "RABMEN SECURITY HUB"
-remote_theme: mmistakes/minimal-mistakes
+remote_theme: "mmistakes/minimal-mistakes"
+
+# Цветовая схема (варианты: default, dark, dirt, neon, air, sunrise, contrast, mint, plum)
+minimal_mistakes_skin: "dark"
+
+# Основные настройки сайта
+url: "https://ariyts.github.io"   # адрес сайта
+baseurl: ""                       # если сайт в корне (ariyts.github.io), оставь пустым
+
+# Автор
+author:
+  name: "RABMEN"
+  avatar: "/assets/images/avatar.png"   # можно добавить картинку в assets/images
+  bio: "Security researcher & pentester notes"
+  location: "Cyberspace"
+  links:
+    - label: "GitHub"
+      icon: "fab fa-github"
+      url: "https://github.com/Ariyts"
+    - label: "Telegram"
+      icon: "fab fa-telegram"
+      url: "https://t.me/yourchannel"
+
+# Навигация (верхнее меню)
+nav:
+  - title: "Главная"
+    url: /
+  - title: "Заметки"
+    url: /notes/
+  - title: "Обо мне"
+    url: /about/
+
+# Включаем плагины
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Настройки отображения
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      comments: false
+      share: true
+      related: true
+      toc: true          # автоматическое оглавление
+      toc_sticky: true   # закреплённое оглавление сбоку
