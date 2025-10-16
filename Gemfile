@@ -5,13 +5,18 @@ source "https://rubygems.org"
 # Указываем Jekyll и минимально необходимую версию
 gem "jekyll", "~> 4.3"
 
-# Указываем нашу тему. Это более правильный способ, чем remote_theme
+# --- Тема и её зависимости ---
 gem "minimal-mistakes-jekyll"
+gem "jekyll-include-cache" # <--- ОЧЕНЬ ВАЖНЫЙ ПЛАГИН ДЛЯ ЭТОЙ ТЕМЫ
 
-# Указываем плагины, которые вы используете в _config.yml
+# --- Ваши плагины из _config.yml ---
 gem "jekyll-feed"
 gem "jekyll-seo-tag"
 gem "jekyll-sitemap"
+
+# --- Дополнительные плагины, которые часто использует тема ---
+gem "jekyll-gist"
+gem "jekyll-paginate"
 
 # Плагины, необходимые для GitHub Pages
 group :jekyll_plugins do
