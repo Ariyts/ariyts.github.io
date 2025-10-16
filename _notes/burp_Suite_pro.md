@@ -1,3 +1,8 @@
+---
+layout: default
+title: Burp Suite pro
+---
+
 Протокол "Full Coverage" для Burp Suite Pro
 Фаза 0: Подготовка и Конфигурация
 Это фундамент. Пропустишь — вся дальнейшая работа будет неполной.
