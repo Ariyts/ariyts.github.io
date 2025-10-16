@@ -31,6 +31,8 @@ nav:
     url: /notes/
   - title: "Обо мне"
     url: /about/
+  - title: "Заметки"
+    url: /notes/
 
 # Включаем плагины
 plugins:
@@ -52,3 +54,8 @@ defaults:
       related: true
       toc: true          # автоматическое оглавление
       toc_sticky: true   # закреплённое оглавление сбоку
+
+collections:
+  notes:
+    output: true
+    permalink: /:collection/:name
